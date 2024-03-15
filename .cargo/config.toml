@@ -1,0 +1,2 @@
+[build]
+rustdocflags = [ "--html-in-header", "../latex/docs-header.html" ]
