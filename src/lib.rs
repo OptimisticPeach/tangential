@@ -4,9 +4,11 @@
 //! $$\mathbb{S}^2 \= \left\\{ (x, y, z) : x^2 + y^2 + z^2 = 1 \right\\}$$
 //!
 
-use glam::Vec3A;
+mod position;
+mod tangent;
+mod barycentrics;
 
-#[inline]
-pub fn project_point_to_tangent(center_of_projection: Vec3A, x: Vec3A) -> Vec3A {
-    x * center_of_projection.dot(x).recip() - center_of_projection
-}
+pub use position::*;
+pub use tangent::*;
+pub use barycentrics::*;
+
